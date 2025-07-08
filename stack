@@ -1,0 +1,62 @@
+public class Stack {
+    private int maxSize;
+    private int[] stackArray;
+    private int top;
+
+    // Constructor
+    public Stack(int size) {
+        maxSize = size;
+        stackArray = new int[maxSize];
+        top = -1; // indicates an empty stack
+    }
+
+    // Push item to stack
+    public void push(int value) {
+        if (isFull()) {
+            System.out.println("Stack is full. Cannot push " + value);
+        } else {
+            stackArray[++top] = value;
+        }
+    }
+
+    // Pop item from stack
+    public int pop() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty. Nothing to pop.");
+            return -1;
+        } else {
+            return stackArray[top--];
+        }
+    }
+
+    // Peek at top item
+    public int peek() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty. Nothing to peek.");
+            return -1;
+        } else {
+            return stackArray[top];
+        }
+    }
+
+    // Check if stack is empty
+    public boolean isEmpty() {
+        return top == -1;
+    }
+
+    // Check if stack is full
+    public boolean isFull() {
+        return top == maxSize - 1;
+    }
+
+    public static void main(String[] args) {
+        Stack myStack = new Stack(5);
+
+        myStack.push(10);
+        myStack.push(20);
+        myStack.push(30);
+        System.out.println("Top element: " + myStack.peek());
+        System.out.println("Popped: " + myStack.pop());
+        System.out.println("Top after pop: " + myStack.peek());
+    }
+}
