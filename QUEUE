@@ -1,0 +1,84 @@
+public class IntQueue {
+    private final int[] arr;
+    private int front;
+    private int rear;
+    private final int capacity;
+    private int size;
+
+    public IntQueue(int capacity) {
+        if (capacity <= 0)
+            throw new IllegalArgumentException("Capacity must be positive");
+        this.capacity = capacity;
+        arr = new int[capacity];
+        front = 0;
+        rear = -1;
+        size = 0;
+    }
+
+    // Add an element to the queue
+    public void enqueue(int item) {
+        if (isFull()) {
+            throw new IllegalStateException("Queue is full. Cannot enqueue " + item);
+        }
+        rear = (rear + 1) % capacity;
+        arr[rear] = item;
+        size++;
+    }
+
+    // Remove and return the front element of the queue
+    public int dequeue() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Queue is empty. Cannot dequeue.");
+        }
+        int item = arr[front];
+        front = (front + 1) % capacity;
+        size--;
+        return item;
+    }
+
+    // Check if queue is empty
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    // Check if queue is full
+    public boolean isFull() {
+        return size == capacity;
+    }
+
+    // Get the front element without removing
+    public int peek() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Queue is empty.");
+        }
+        return arr[front];
+    }
+
+    // Get the current size of the queue
+    public int getSize() {
+        return size;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("[");
+        for (int i = 0; i < size; i++) {
+            sb.append(arr[(front + i) % capacity]);
+            if (i != size - 1) sb.append(", ");
+        }
+        sb.append("]");
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        IntQueue q = new IntQueue(5);
+        q.enqueue(10);
+        q.enqueue(20);
+        q.enqueue(30);
+        System.out.println("Front element is: " + q.peek());
+        System.out.println("Dequeued: " + q.dequeue());
+        System.out.println("Dequeued: " + q.dequeue());
+        System.out.println("Queue size: " + q.getSize());
+        System.out.println("Queue: " + q);
+    }
+}
