@@ -1,4 +1,4 @@
-class BNode {
+/*class BNode {
     int data;
     BNode left;
     BNode right;
@@ -7,13 +7,13 @@ class BinaryTree {
     BNode root;
 
     void treeImplementation() {
-        BNode node1 = new BNode();
-        node1.data = 10;
-        BNode node2 = new BNode();
-        node2.data = 20;
-        BNode node3 = new BNode();
-        node3.data = 30;
-        BNode node4 = new BNode();
+        BNode node1=new BNode();
+        node1.data=10;
+        BNode node2=new BNode();
+        node2.data=20;
+        BNode node3=new BNode();
+        node3.data=30;
+        BNode node4=new BNode();
         node4.data = 40;
         BNode node5 = new BNode();
         node5.data = 50;
@@ -64,4 +64,4 @@ class BinaryTree {
             System.out.println("POSTORDER TRAVERSAL");
             obj.postorder(obj.root);
         }
-    }
+    }*/
