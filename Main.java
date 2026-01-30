@@ -1,4 +1,4 @@
-import java.util.*;
+/*import java.util.*;
 class Node{
     int data;
     Node next;
@@ -111,4 +111,7 @@ public class Main{
 
 
     }
-}
+
+    public boolean sumnatural(int i) {
+    }
+}*/
