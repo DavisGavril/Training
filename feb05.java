@@ -1,4 +1,4 @@
-import java.util.*;
+/*import java.util.*;
 class feb05 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -84,5 +84,5 @@ class Graph {
         }
         System.out.println();
     }
-}
+}*/
 
