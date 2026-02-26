@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Davis Gavril | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:linear;
+    color:#f1f5f9;
+    line-height:1.6;
+}
+
+/* ===== NAVBAR ===== */
+nav{
+    position:sticky;
+    top:0;
+    background:linear-gradient(90deg,#1e293b,#0f172a);
+    padding:15px 0;
+}
+
+.nav-container{
+    max-width:1100px;
+    margin:auto;
+    padding:0 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.brand{font-weight:700;font-size:1.2rem;}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:#f1f5f9;
+    text-decoration:none;
+}
+
+.resume-btn{
+    padding:8px 14px;
+    border-radius:20px;
+    background:linear-gradient(90deg,#38bdf8,#6366f1);
+    color:white;
+}
+
+/* ===== HERO ===== */
+header{
+    max-width:1100px;
+    margin:auto;
+    padding:100px 20px;
+    display:flex;
+    align-items:center;
+    gap:50px;
+}
+
+.profile-img img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid #38bdf8;
+}
+
+.hero-content h1{
+    font-size:2.8rem;
+    background:linear-gradient(90deg,#38bdf8,#6366f1);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero-content p{
+    margin-top:15px;
+    color:#94a3b8;
+}
+
+/* ===== SECTIONS ===== */
+section{
+    padding:80px 20px;
+}
+
+#about{background:linear-gradient(180deg,#0f172a,#1e293b);}
+#projects{background:linear-gradient(180deg,#1e293b,#111827);}
+#education{background:linear-gradient(180deg,#111827,#1e293b);}
+#experience{background:linear-gradient(180deg,#1e293b,#0f172a);}
+#contact{background:linear-gradient(180deg,#0f172a,#111827);}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+section h2{
+    font-size:2rem;
+    margin-bottom:30px;
+    color:#38bdf8;
+}
+
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:12px;
+    margin-bottom:20px;
+}
+
+.card span{
+    color:#94a3b8;
+    font-size:0.9rem;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#0f172a;
+    color:#94a3b8;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+    header{
+        flex-direction:column;
+        text-align:center;
+    }
+    .profile-img img{
+        width:180px;
+        height:180px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="nav-container">
+    <div class="brand">Davis</div>
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <a href="resume.pdf" download class="resume-btn">Resume</a>
+    </div>
+</div>
+</nav>
+
+<header>
+    <div class="profile-img">
+        <img src="profile.jpg" alt="Davis Gavril">
+    </div>
+
+    <div class="hero-content">
+        <h1>Davis Gavril T</h1>
+        <p>B.Tech Information Technology Student | Aspiring Software Developer</p>
+    </div>
+</header>
+
+<div class="container">
+
+<!-- ABOUT -->
+<section id="about">
+<h2>About Me</h2>
+<p>
+B.Tech Information Technology student with strong foundations in programming,
+data structures, algorithms, and software development. Hands-on experience in
+web and mobile application development. Seeking entry-level software
+development opportunities to apply technical and analytical skills.
+</p>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="card">
+<h3>DR. VENOM – Emergency SOS Web Application</h3>
+<span>HTML, CSS, Bootstrap, AngularJS, MySQL</span>
+<p>
+Developed a responsive emergency assistance web application.
+Implemented real-time SOS alerts with geolocation and emergency contact notifications.
+Integrated Google Maps API to display nearby hospitals.
+Designed admin panel to dynamically manage first-aid resources.
+</p>
+</div>
+
+<div class="card">
+<h3>To-Do List Mobile Application</h3>
+<span>Flutter, Dart, Firebase, SQLite</span>
+<p>
+Developed a cross-platform mobile application for task and time management.
+Implemented CRUD operations for tasks and projects.
+Designed responsive UI using Flutter Material Design.
+Integrated time tracking with date and notes.
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+<h2>Education</h2>
+
+<div class="card">
+<h3>Bachelor of Technology – Information Technology</h3>
+<span>K.S. Rangasamy College of Technology (2023 – 2027)</span>
+<p>CGPA: 7.91/10</p>
+</div>
+
+<div class="card">
+<h3>Higher Secondary Education</h3>
+<span>KSR Matriculation Higher Secondary School (2022 – 2023)</span>
+<p>Percentage: 74.6%</p>
+</div>
+
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+<h2>Experience</h2>
+
+<div class="card">
+<h3>IT Intern – Bornfire Innovations Pvt Ltd</h3>
+<p>
+Worked on frontend development using HTML and CSS.
+Designed responsive web interfaces following modern UI/UX principles.
+Collaborated with development teams to improve usability and performance.
+</p>
+</div>
+
+<div class="card">
+<h3>Android Developer Intern – EduSkills</h3>
+<p>
+Completed 10-week virtual internship focused on Android application development.
+Built mobile applications using modern Android development tools.
+</p>
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: davisgavril292006@gmail.com</p>
+<p>Phone: +91 9363015224</p>
+<p>GitHub: https://github.com/DavisGavril</p>
+<p>LinkedIn: https://www.linkedin.com/in/davis-gavril-t</p>
+</section>
+
+</div>
+
+<footer>
+<p>© 2026 Davis Gavril T. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
